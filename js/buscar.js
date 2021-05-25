@@ -43,9 +43,9 @@ function displayEmpleados(empleados) {
         //                       <h3>Teléfono: ${empleados[i].phone}</h3><br>
         //                       <h3>Correo: ${empleados[i].email}</h3><br>
         //                       <h3>Dirección: ${empleados[i].address}</h3><br>`;
-        document.getElementById("nombre").value = empleados[i].name
-        document.getElementById("telefono").value = empleados[i].phone
-        document.getElementById("email").value = empleados[i].email
-        document.getElementById("direccion").value = empleados[i].address
+        document.getElementById("nombre").innerHTML = empleados[i].name
+        document.getElementById("telefono").innerHTML = empleados[i].phone
+        document.getElementById("email").innerHTML = empleados[i].email
+        document.getElementById("direccion").innerHTML = empleados[i].address
     }
 }
