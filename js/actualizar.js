@@ -25,7 +25,7 @@ function actualizar() {
     var phone = document.getElementById('input-phone').value;
     var email = document.getElementById('input-mail').value;
     var address = document.getElementById('input-address').value;
-
+    console.log(`datos: ${user_id}, ${name}, ${last_name}, ${phone}, ${email}, ${address}`);
     axios.put(url + "/empleados/" + user_id, {
         name: name,
         last_name: last_name,
