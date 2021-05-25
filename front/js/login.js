@@ -1,5 +1,5 @@
 window.onload = init;
-var url = "http://localhost:3000"
+var url = "https://taller-node-rrhh.herokuapp.com"
 
 function init() {
     if (!localStorage.getItem("token")) {
