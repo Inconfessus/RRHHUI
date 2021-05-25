@@ -9,7 +9,7 @@ function init() {
                 'Authorization': "bearer " + localStorage.getItem("token")
             }
         }
-        document.querySelector('.btn-primary').addEventListener('click', eliminar);
+        document.querySelector('.btn-danger').addEventListener('click', eliminar);
 
     } else {
         window.location.href = "login.html"
