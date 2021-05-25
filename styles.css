@@ -1,0 +1,49 @@
+.body-login{
+    background-color: #00b894;
+    background-image: url('images/bg.jpg');
+    background-size: 100%;
+    backdrop-filter: blur(3px);
+}
+#row-main{
+    height: 100vh;
+}
+#row-third{
+    height: 20vh;
+}
+#row-secondary{
+    height: 60vh;
+}
+.btn-primary{
+    background-color: #00b894;
+    border-color: #00b894;
+}
+a{
+    color: #212529;
+}
+a:hover{
+    text-decoration: none;
+}
+footer{
+    background-color: #00b894;
+    color:  white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 60px;
+}
+nav a{
+    color: #00b894;
+}
+#container-main{
+    margin-top: 90px;
+}
+.row-espaciadora{
+    height: 9.4vh;
+}
+nav{
+    background-color: white;
+}
+.text-exito{
+    color: #00b894;
+}

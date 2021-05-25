@@ -1,26 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Taller de Node.js S.A. de C.V.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <title>Sistema de Altas Node JS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/eliminar.js"></script>
-
 </head>
-
 <body>
-    <div class="login">
-        <h1>Eliminar Empleado</h1>
-        <input type="number" name="u" placeholder="Ingrese el ID del empleado" id="input-id" required="required" />
-        <button class="btn btn-primary btn-block btn-large">Eliminar Empleado</button>
-        <button class="btn btn-primary btn-block2 btn-large" onclick="location.href='index.html'">Regresar</button>
+    <nav class="navbar navbar-expand-md  fixed-top border-bottom">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">SANodeJS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-md-flex flex-row-reverse" id="navbar">
+                <div>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item text-center">
+                            <a href="agregar.html" class="nav-link px-md-3"><img src="images/usuario.png" alt="" width="32px"></a>
+                            <hr width="50%" class="d-md-none d-sm-block">
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="actualizar.html" class="nav-link px-md-3"><img src="images/editar.png" alt="" width="32px"></a>
+                            <hr width="50%" class="d-md-none d-sm-block">
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="buscar.html" class="nav-link px-md-3"><img src="images/buscar.png" alt="" width="32px"></a>
+                            <hr width="50%" class="d-md-none d-sm-block">
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="eliminar.html" class="nav-link px-md-3"><img src="images/eliminar.png" alt="" width="32px"></a>
+                            <hr width="50%" class="d-md-none d-sm-block">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="container-main">
+        <h1 class="font-weight-light">Eliminar Empleado</h3><br>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="E-mail" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- ! modificar query para eliminar por email -->
+                        <!-- ! cambiar id en js -->
+                        <input type="mail" name="u" placeholder="Ingrese el email del empleado" id="input-id" required />
+                        
+                        <h3 class="font-weight-light card-title text-center" id="nombre">Id del Empleado</h3>
+                        <!-- <p class="lead">Teléfono: <span id="telefono"></span></p> -->
+                        <!-- <p class="lead">E-mail: <span id="email"></span></p> -->
+                        <!-- <p class="lead">Dirección: <span id="direccion"></span></p> -->
+
+                        <input type="number" name="u" placeholder="Ingrese el ID del empleado" id="input-id" required="required" />
+
+                        <div class="text-center">
+                            <!-- ! modificar clase en js a btn-danger -->
+                            <a href="" class="btn btn-danger">Eliminar</a>
+                        </div>  
+                    </div>
+                </div>
+                <h2 class="font-weight-light text-center text-danger" id="error">Ocurrió un error, inténtalo de nuevo.</h2>
+            </div>
+        </div>
     </div>
-
-
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center align-self-center">
+                    <h5 class="font-weight-light mt-4">Taller de Node S.A de C.V</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
 </body>
-
 </html>
