@@ -1,6 +1,7 @@
 window.onload = init;
 var url = "https://taller-node-rrhh.herokuapp.com"
 
+//función para darle acción al botón para inicar sesión
 function init() {
     if (!localStorage.getItem("token")) {
         document.querySelector('.btn-primary').addEventListener('click', login);
@@ -10,7 +11,7 @@ function init() {
 }
 
 
-
+//función para iniciar sesión
 function login() {
     var email = document.getElementById('input-mail').value;
     var pass = document.getElementById('input-password').value;

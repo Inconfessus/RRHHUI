@@ -2,6 +2,7 @@ window.onload = init;
 var headers = {};
 var url = "https://taller-node-rrhh.herokuapp.com"
 
+//Darle función al boton de actualizar datos del empleado
 function init() {
     if (localStorage.getItem("token")) {
         headers = {

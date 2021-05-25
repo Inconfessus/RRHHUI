@@ -17,7 +17,7 @@ function init() {
 }
 
 
-
+//Función para eliminar empelados del sistema
 function eliminar() {
     var user_id = document.getElementById("input-id").value
 
