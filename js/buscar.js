@@ -37,11 +37,15 @@ function buscar() {
 function displayEmpleados(empleados) {
 
     for (var i = 0; i < empleados.length; i++) {
-        subtitulo.innerHTML = `<h3>Datos del usuario:</h3>`;
-        datos.innerHTML = `<h3>Número de identificación: ${empleados[i].user_id}</h3><br>
-                              <h3>Nombre: ${empleados[i].name} ${empleados[i].last_name}</h3><br>
-                              <h3>Teléfono: ${empleados[i].phone}</h3><br>
-                              <h3>Correo: ${empleados[i].email}</h3><br>
-                              <h3>Dirección: ${empleados[i].address}</h3><br>`;
+        // subtitulo.innerHTML = `<h3>Datos del usuario:</h3>`;
+        // datos.innerHTML = `<h3>Número de identificación: ${empleados[i].user_id}</h3><br>
+        //                       <h3>Nombre: ${empleados[i].name} ${empleados[i].last_name}</h3><br>
+        //                       <h3>Teléfono: ${empleados[i].phone}</h3><br>
+        //                       <h3>Correo: ${empleados[i].email}</h3><br>
+        //                       <h3>Dirección: ${empleados[i].address}</h3><br>`;
+        document.getElementById("nombre").value = empleados[i].name
+        document.getElementById("telefono").value = empleados[i].phone
+        document.getElementById("email").value = empleados[i].email
+        document.getElementById("direccion").value = empleados[i].address
     }
 }
